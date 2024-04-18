@@ -1,0 +1,412 @@
+//эфекты для бургер меню
+
+@keyframes header-burger_Open_span {
+    0%{
+        transform: translate(0,0) scale(1); 
+    }
+    20%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,0) scale(1); 
+    }
+    40%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,0) scale(1); 
+    }
+    50%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,11px) scale(1); 
+    }
+    80%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,-11px) scale(1); 
+    }
+    100%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,100px) scale(0);
+    }
+}
+
+@keyframes header-burger_Open_after {
+    0%{
+        transform: translate(0,0);
+    }
+    40%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(80deg) 
+        translate(-7px, -7px);
+    }
+    100%{
+        transform: rotate(45deg) 
+        translate(-7px, -7px);
+    }
+}
+
+@keyframes header-burger_Open_before {
+    0%{
+        transform: translate(0,0);
+    }
+    40%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(-90deg) 
+        translate(-7px, -7px);
+    }
+    100%{
+        transform: rotate(-45deg) 
+        translate(-10px, 9px);
+    }
+}
+
+@keyframes header-burger_Exit_span {
+    0%{ 
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,10px) scale(0);
+    }
+    100%{
+        transform: translate(0,0) scale(1);
+    }
+}
+
+@keyframes header-burger_Exit_after {
+    0%{
+        transform: rotate(45deg) 
+        translate(-7px, -7px);
+    }
+    
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes header-burger_Exit_before {
+    0%{
+        transform: rotate(-45deg) 
+        translate(-10px, 9px);
+    }
+   
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes header_menu_open {
+    0%{
+        top: -100vh;
+    }
+    20%{
+        height: 90vh;
+        border-bottom: 50px solid $accent_color_bluer;
+    }
+    50%{
+        height: 80vh;
+        border-bottom: 20px solid $accent_color_bluer;
+        box-shadow: 0 0 50px 5px $accent_color; 
+    }
+    80%{
+        box-shadow: 0 0 50px 5px $text_color_withe; 
+    }
+    100%{
+        top: 0;
+    }
+}
+
+@keyframes header_menu_exit {
+    0%{
+        top: 0;
+    }
+    20%{
+        height: 90vh;
+        border-bottom: 50px solid $accent_color_bluer;
+    }
+    50%{
+        height: 80vh;
+        border-bottom: 20px solid $accent_color_bluer;
+        box-shadow: 0 0 50px 5px $accent_color; 
+    }
+    80%{
+        box-shadow: 0 0 50px 5px $text_color_withe; 
+    }
+    100%{
+        top: -100vh;
+    }
+}
+
+
+//Эфекты для блока обо мне
+
+@keyframes icons_HTML{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #bd8d68;
+    }
+    50%{
+        color: #df733c;
+
+    }
+    80%{
+        color: #ff7b00;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_CSS{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #5889a5;
+    }
+    50%{
+        color: #4598a9;
+    }
+    80%{
+        color: #3acebd;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_SCSS{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #af6ddb;
+    }
+    50%{
+        color: #8645a9;
+    }
+    80%{
+        color: #ce3aae;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_JS{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #dbd96d;
+    }
+    50%{
+        color: #a99c45;
+    }
+    80%{
+        color: #eee71e;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_PHP{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #8063bb;
+    }
+    50%{
+        color: #6007ae;
+    }
+    80%{
+        color: #9157ef;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_Python{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #63a5bb;
+    }
+    50%{
+        color: #d5de5f;
+    }
+    70%{
+        color: #57adef;
+    }
+    80%{
+        color: #ceda27;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_SQL{
+    0%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        color: #cc6d3a;
+    }
+    50%{
+        color: #5f9cde;
+    }
+    70%{
+        color: #efa357;
+    }
+    80%{
+        color: #27a7da;
+    }
+    100%{
+        color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+@keyframes icons_PS{
+    0%{
+        background-color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+    20%{
+        background-color:  #1c5182;
+    }
+    50%{
+        background-color: #5f9cde;
+    }
+    70%{
+        background-color:  #576bef;
+    }
+    80%{
+        background-color:  #2763da;
+    }
+    100%{
+        background-color: rgba($color: #b3835d, $alpha: 0.5);
+    }
+}
+
+//эфекты для блока контакты
+
+@keyframes animation_social_telegram{
+    0%{
+        box-shadow: 0 0 40px 25px #228cb9;
+        transform: rotate(0);
+        border-radius: 30%;
+    }
+    20%{
+        box-shadow: 0 0 45px 25px #3cb1b9;
+        transform: rotate(100deg);
+        border-radius: 40%;
+    }
+    50%{
+        box-shadow: 0 0 50px 25px #54a3f8;
+        transform: rotate(190deg);
+        border-radius: 45%;
+    }
+    80%{
+        box-shadow: 0 0 40px 25px #4d7dd6;
+        transform: rotate(280deg);
+        border-radius: 40%;
+    }
+    100%{
+        box-shadow: 0 0 35px 25px #228cb9;
+        transform: rotate(360deg);
+        border-radius: 30%;
+    }
+}
+
+@keyframes animation_social_viber{
+    0%{
+        box-shadow: 0 0 40px 25px #9622b9;
+        transform: rotate(0);
+        border-radius: 30%;
+    }
+    20%{
+        box-shadow: 0 0 45px 25px #50285c;
+        transform: rotate(100deg);
+        border-radius: 40%;
+    }
+    50%{
+        box-shadow: 0 0 50px 25px #814dbd;
+        transform: rotate(190deg);
+        border-radius: 45%;
+    }
+    80%{
+        box-shadow: 0 0 40px 25px #5f1f89;
+        transform: rotate(280deg);
+        border-radius: 40%;
+    }
+    100%{
+        box-shadow: 0 0 35px 25px  #9622b9;
+        transform: rotate(360deg);
+        border-radius: 30%;
+    }
+}
+
+@keyframes animation_social_VK{
+    0%{
+        box-shadow: 0 0 40px 25px #617da0;
+        transform: rotate(0);
+        border-radius: 30%;
+    }
+    20%{
+        box-shadow: 0 0 45px 25px #619ee3;
+        transform: rotate(100deg);
+        border-radius: 40%;
+    }
+    50%{
+        box-shadow: 0 0 50px 25px #2f69ab;
+        transform: rotate(190deg);
+        border-radius: 45%;
+    }
+    80%{
+        box-shadow: 0 0 40px 25px #2e6882;
+        transform: rotate(280deg);
+        border-radius: 40%;
+    }
+    100%{
+        box-shadow: 0 0 35px 25px  #47a5db;
+        transform: rotate(360deg);
+        border-radius: 30%;
+    }
+}
+
+@keyframes animation_social_WhatsApp{
+    0%{
+        box-shadow: 0 0 40px 25px #42e4a9;
+        transform: rotate(0);
+        border-radius: 30%;
+    }
+    20%{
+        box-shadow: 0 0 45px 25px #1e9d6f;
+        transform: rotate(100deg);
+        border-radius: 40%;
+    }
+    50%{
+        box-shadow: 0 0 50px 25px #42e46a;
+        transform: rotate(190deg);
+        border-radius: 45%;
+    }
+    80%{
+        box-shadow: 0 0 40px 25px #43cea9;
+        transform: rotate(280deg);
+        border-radius: 40%;
+    }
+    100%{
+        box-shadow: 0 0 35px 25px  #18c06f;
+        transform: rotate(360deg);
+        border-radius: 30%;
+    }
+}
