@@ -2,6 +2,7 @@ const header_burger = document.querySelector('.header-menu');
 const body_doc = document.querySelector('body');
 
 
+
 $(document).ready(function () {
     $('.header-burger').click(function (event) { 
     $('.header-burger,.header-menu').toggleClass('active');

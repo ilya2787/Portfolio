@@ -17,24 +17,25 @@ li{
 
 //Основные стили
 
+.conteiner{
+    max-width: 1848px;
+    margin: 0 auto;
+}
+
 body{
     background-color: $Body_color;
     font-family: 'Pixil_font';
     overflow-x: hidden;
+
 }
 
 
 
 //первый блок 
-header{
+.header{
     height: 110vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     background-image: url(../img/img_header.jpg);
-    background-size: cover;
+    background-size: cover;  
     background-repeat: no-repeat;
     @media (max-width: 1200px) {
       background-position: 50% 50%;
@@ -42,11 +43,20 @@ header{
     @media(max-width:760px){
         background-image: none;
     }
+    &_content{
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
     nav{
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
+        height: 50px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -58,12 +68,15 @@ header{
             background-color: rgba($color: $Body_color, $alpha: 0.7);
         }
         .language_block{
+            display: flex;
+            align-items: center;
             z-index: 91;
-            padding: 13px 10px;
+            height: 100%;
+            padding: 0 15px;
             background-color: $accent_color;
             margin: 0;
             cursor: pointer;
-            border-radius: 0 0 5px 0;
+            border-radius: 0 0 5px 5px;
             transition: all 0.5s;
             @media (max-width:1000px) {
                 border-radius: 0 10px 10px 0;
@@ -84,8 +97,9 @@ header{
         .Menu{
             display: flex;
             margin: 0;
+            align-items: center;
             li{
-                margin: 10px 5vw 0 0;
+                margin-right: clamp(10px, 5vw, 70px);
                 transition: all 0.5s;
                 position: relative;
                 &:after{
@@ -116,13 +130,13 @@ header{
                 }
                 a{
                     color: $accent_color;
-                    font-size: clamp(15px, 2vw, 2vh);
+                    font-size: clamp(15px, 1.5vw, 20px);
                     font-family: 'Pixil_font';
                     transition: all 0.5s;
                 }
             }
             li:last-child{
-                margin: 10px 90px 0 0;
+                margin-right: 90px;
             }
             @media (max-width:1000px) {
                 display: none;
@@ -235,7 +249,8 @@ header{
         height: clamp(250px, 50vw, 300px);
         border-radius: 50%;
         position: relative;
-        top: -90px;
+        top: -50px;
+        border: 2px solid #9f9f9f;
         &::before{
             content: '';
             position: absolute;
@@ -243,9 +258,21 @@ header{
             bottom: -10px;
             left: -10px;
             right: -10px;
-            background-color: $text_color_withe;
+            background-color: #787978;
             border-radius: 50%;
             z-index: -1;
+            filter: blur(50px);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 5px solid #b3835d;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            filter: opacity(100%) blur(10px);
         }
         @media (max-width:760px) {
             display: block;
@@ -258,9 +285,12 @@ header{
             margin: 0 0 0 50px;
         }
         @media (max-width:760px) {
+            margin: 0 0 0 5%;
+            width: 100%;
+        }
+        @media (max-width:430px) {
             margin: 0;
             text-align: center;
-            width: 100%;
         }
         h1{
             font-size: clamp(19px, 4vw, 35px);
@@ -270,6 +300,7 @@ header{
         }
         h1:first-child{
             color: $accent_color;
+
         }
         h1:nth-child(2){
             color: $text_color_withe;
@@ -283,7 +314,7 @@ header{
 
 //второй блок (ПОРТФОЛИО)
 .block_portfolio{
-    margin: 100px 0 0 0;
+    margin-top: 100px;
     @media (max-width:1000px) {
         margin: 0;
     }
@@ -354,7 +385,7 @@ header{
             }
             a{
                 color: $text_color_withe;
-                font-size: clamp(17px, 2.3vw, 25px);
+                font-size: clamp(17px, 1.8vw, 25px);
                 margin: 40px 0 0 10px;
                 @media (max-width:760px) {
                     position: absolute;
@@ -370,6 +401,12 @@ header{
             justify-content: flex-start;
             align-items: flex-end;
             max-width: 50%;
+            @media (max-width:760px) {
+                max-width: 100%;
+                margin-top: 50px;
+                justify-content: center;
+                padding-bottom: 80px;
+            }
             p{
                 color: $text_color_withe;
                 font-size: clamp(15px, 1.7vw, 25px);
@@ -388,6 +425,14 @@ header{
                 transition: all 0.5s;
                 @media (max-width:1300px) {
                     font-size: 15px;
+                }
+                @media (max-width:500px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    width: 100%;
+                    height: 55px;
                 }
                
                 span{
@@ -413,15 +458,24 @@ header{
                     }
                 }
                 &:hover {
-                    border-radius: 10px 0 0 10px;
-                    color: $text_color_withe;
-                    span {
-                    opacity: 1;
-                    width: 25%;
-                    i{
+                    @media (min-width:760px) {
+                        border-radius: 10px 0 0 10px;
+                        color: $text_color_withe;
+                        span {
                         opacity: 1;
+                        width: 25%;
+                            i{
+                                opacity: 1;
+                            }
+                        }        
                     }
-                }}
+                }
+                &:active{
+                    @media (max-width:500px) {
+                        background-color: #18c06f;
+                        color: $text_color_withe;
+                    }    
+                }
 
             }
         }
@@ -430,18 +484,30 @@ header{
 
 //Третий блок (ОБО МНЕ)
 .block_about{
-    margin: 350px 0 0 0;
+    margin-top: 350px;
     padding: 100px 90px 0 90px;
     position: relative;
     @media (max-width:1000px) {
-        margin: 250px 0 0 0;
+        margin-top: 250px;
         padding: 100px 50px 0 50px;
+    }
+    @media (max-width:760px) {
+        margin-top: 130px;
+        padding: 100px 20px 0 20px;
     }
     h1{
         @include title_h1_conf(0 0 30px 0);
         position: absolute;
         right: 90px;
         top: 0;
+        @media (max-width: 760px) {
+            right: auto;
+            left: 20px;
+        }
+        @media (max-width: 460px) {
+            line-height: 1.5;
+        }
+
     }
     p{
        
@@ -478,6 +544,9 @@ header{
             flex-wrap: wrap;
             column-gap: 40px;
             row-gap: 70px;
+            @media (max-width:400px) {
+                column-gap: 0;
+            }
             &_frontend{
                @include skill_blocks;
                i:first-child{
@@ -550,10 +619,13 @@ header{
 
 //Четвертый блок (КОНТАКТЫ)
 .block_contacts{
-    margin: 300px 0 200px 0;
+    margin: 300px auto 200px auto;
     padding: 0 90px;
     @media (max-width:1000px) {
         padding: 0 50px;
+    }
+    @media (max-width: 760px) {
+        padding: 0 20px;
     }
     h1{
         @include title_h1_conf(0 0 80px 0);
@@ -572,6 +644,10 @@ header{
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        @media (max-width:600px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         a{
             display: flex;
             flex-direction: row;
@@ -584,6 +660,9 @@ header{
             @media (max-width:1050px) {
                 flex-direction: column;
             }
+            @media (max-width:600px) {
+                flex-direction: row;
+            }
             .img_social{
                 width: clamp(70px, 7vw, 100px);
                 height: clamp(70px, 7vw, 100px);
@@ -595,6 +674,9 @@ header{
                 border: 2px solid transparent;
                 @media (max-width:1050px) {
                     margin: 0 0 20px 0;
+                }
+                @media (max-width: 600px) {
+                    margin: 0 30px 30px 0;
                 }
                 img{
                     width: 100%;
@@ -677,10 +759,16 @@ header{
             justify-content: space-between;
             flex-wrap: wrap;
             row-gap: 50px;
+            @media (max-width:760px) {
+                flex-direction: column;
+            }
             .input_name{
                 width: 48%;
                 position: relative;
                 margin: 0;
+                @media (max-width:760px) {
+                    width: 100%;
+                }
                 #User_name{
                 width: calc(100% - 40px);
                  height: 70px;
@@ -712,6 +800,9 @@ header{
                 width: 48%;
                 position: relative;
                 margin: 0;
+                @media (max-width:760px) {
+                    width: 100%;
+                }
                 #User_Email{
                     width: calc(100% - 40px);
                     height: 70px;
@@ -790,6 +881,9 @@ header{
                     @media (max-width:1300px) {
                         font-size: 15px;
                     }
+                    @media (max-width:500px) {
+                        left: 0;
+                    }
                     span{
                         background: $accent_color;
                         width: 100%;
@@ -813,17 +907,23 @@ header{
                         }
                     }
                     &:hover {
-                        border-radius: 10px 0 0 10px;
-                        color: $text_color_withe;
-                        span {
-                            opacity: 1;
-                            width: 25%;
-                        i{
-                            opacity: 1;
-                        }
+                        @media (min-width: 760px) {
+                            border-radius: 10px 0 0 10px;
+                            color: $text_color_withe;
+                            span {
+                                opacity: 1;
+                                width: 25%;
+                                i{
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
                     &:active {
+                        @media (max-width:500px) {
+                            background-color: #18c06f;
+                            color: $text_color_withe;
+                        }
                         span{
                             background-color: #18c06f;
                         }
@@ -838,86 +938,99 @@ header{
 
 
 //Блок подвала
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 90px;
+.footer{
     background-color: $footer_background;
     position: relative;
-    border-top: 2px solid $accent_color;
-    .cooperait{
-        margin: 0;
+    z-index: 0;
+    &_content{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        font-size: 1vw;
-        @media (max-width:1100px){
-            font-size: 15px;
+        padding: 30px 90px;
+        @media (max-width:760px) {
+            padding: 30px 20px;
         }
-        p{
-            margin: 0 0 0 20px;
-            color: $footer_text_color;
-        }
-        p:first-child{
-            border: 2px solid $footer_text_color;
-            padding: 5px;
-            border-radius: 50%;
-        }
-    }
-    .button_app{
-        margin: 0;
-        position: absolute;
-        top: -50px;
-        left: 47%;
-        background-color: $footer_background;
-        padding: 0 30px 30px 30px;
-        border-radius: 50% 50% 0 0;
-        border-top: 2px solid $accent_color;
-        transition: all 0.5s;
-        cursor: pointer;
-        @media (max-width:1000px) {
-            left: 44%;
-        }
-        i{
-            color: $accent_color;
-            font-size: 70px;
-            @media (max-width:1100px) {
-                font-size: 55px;
-            }
-        }
-        &:hover{
-            top: -55px;
-        }
-    }
-    .replay_menu{
-        margin: 0;
-        ul{
-            position: relative;
-            z-index: 2;
+        .cooperait{
+            margin: 0;
             display: flex;
             flex-direction: row;
             align-items: center;
-            li{
-                margin: 0 40px 0 0;
-                font-size: 1vw;
-                a{
-                    color: $footer_text_color;
-                    transition: all 0.5s;
-                    &:hover{
-                        color: $accent_color;
-                    }
+            font-size: clamp(14px, 3vw, 20px);
+            p{
+                margin: 0 0 0 20px;
+                color: $footer_text_color;
+            }
+            p:first-child{
+                border: 2px solid $footer_text_color;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+        .button_app{
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            top: -50px;
+            left: 47%;
+            background-color: $footer_background;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.5s;
+            cursor: pointer;
+            z-index: -1;
+            @media (max-width:1000px) {
+                left: 44%;
+            }
+            @media (max-width:600px) {
+                left: 40%;
+            }
+            @media (max-width:420px) {
+               left: 35%;
+            }
+            i{
+                color: $accent_color;
+                font-size: 70px;
+                
+                @media (max-width:1100px) {
+                    font-size: 55px;
                 }
             }
-            li:last-child{
-                margin: 0;
+            &:hover{
+                top: -55px;
             }
         }
-        @media (max-width:1300px) {
-            display: none;
+        .replay_menu{
+            margin: 0;
+            ul{
+                position: relative;
+                z-index: 2;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                li{
+                    margin: 0 40px 0 0;
+                    font-size: clamp(15px, 3vw, 20px);
+                    a{
+                        color: $footer_text_color;
+                        transition: all 0.5s;
+                        &:hover{
+                            color: $accent_color;
+                        }
+                    }
+                }
+                li:last-child{
+                    margin: 0;
+                }
+            }
+            @media (max-width:1300px) {
+                display: none;
+            }
         }
     }
+    
 }
 
 
