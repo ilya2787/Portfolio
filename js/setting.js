@@ -17,9 +17,10 @@ $(document).ready(function () {
         document.querySelector('.header-menu').classList.add('Exit');
     }
     });
-
+  
     
-    $('a').on('click', function() {
+
+    $('.button_app a, .replay_menu a, .Menu a, .header-menu a').on('click', function() {
 
         let href = $(this).attr('href');
 
@@ -32,19 +33,36 @@ $(document).ready(function () {
 
         return false;
     });
-    
+
+       
+  
+
 });
 
-const header_menu_a = header_burger.getElementsByTagName('a');
-for (var i = 0; header_menu_a.length; i++) header_menu_a[i].addEventListener('click', RemuveClass);
 
-function RemuveClass(event){
-    document.querySelector('.header-burger').classList.remove('active');
-    document.querySelector('.header-menu').classList.remove('active');
-    document.querySelector('.header-burger').classList.add('Exit');
-    document.querySelector('.header-menu').classList.add('Exit');
-    body_doc.setAttribute('style', 'overflow-x: hidden;');
-};
+const header_menu_a = header_burger.querySelectorAll('.burgerA');
+  
+header_menu_a.forEach((a) => {
+    a.addEventListener('click', RemuveClass)
+})
+
+    function RemuveClass(event){
+        document.querySelector('.header-burger').classList.remove('active');
+        document.querySelector('.header-menu').classList.remove('active');
+        document.querySelector('.header-burger').classList.add('Exit');
+        document.querySelector('.header-menu').classList.add('Exit');
+        body_doc.setAttribute('style', 'overflow-x: hidden;');
+    };
+
+
+  
+
+
+
+
+
+
+
 
 
 

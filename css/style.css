@@ -466,33 +466,74 @@ body {
   }
 }
 .header nav .language_block {
-  display: flex;
-  align-items: center;
-  z-index: 91;
-  height: 100%;
-  padding: 0 15px;
-  background-color: #f89554;
+  z-index: 93;
   margin: 0;
-  cursor: pointer;
-  border-radius: 0 0 5px 5px;
+  height: 100%;
   transition: all 0.5s;
+  position: relative;
 }
 @media (max-width: 1000px) {
   .header nav .language_block {
     border-radius: 0 10px 10px 0;
   }
 }
-.header nav .language_block:hover {
-  background-color: #d1d4cd;
+.header nav .language_block .language_block_a {
+  position: absolute;
+  top: 0;
+  z-index: 91;
+  height: 0;
+  padding-top: 20px;
+  left: 5px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(248, 149, 84, 0.7);
+  transition: all 0.5s;
 }
-.header nav .language_block:hover p {
+.header nav .language_block .language_block_a a {
+  padding: 15px 10px;
+  opacity: 0;
+  transition: all 0.5s;
   color: #051b26;
 }
+.header nav .language_block .language_block_a a:hover {
+  background-color: #d1d4cd;
+}
+.header nav .language_block .language_block_a a:active {
+  background-color: #18c06f;
+}
+.header nav .language_block .language_block_a a:last-child {
+  border-radius: 0 0 5px 5px;
+  border-top: 2px solid #d1d4cd;
+}
+.header nav .language_block .language_block_a.active_p_language {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 60%;
+  height: 190%;
+}
+.header nav .language_block .language_block_a.active_p_language a {
+  opacity: 1;
+}
 .header nav .language_block p {
+  display: block;
+  background-color: #f89554;
   color: white;
+  height: 100%;
   font-family: "Pixil_font";
   font-size: 15px;
   transition: all 0.5s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: absolute;
+  z-index: 92;
+  border-radius: 0 5px 5px 0;
+}
+.header nav .language_block p:hover {
+  background-color: #88786e;
+  color: #051b26;
 }
 .header nav .Menu {
   display: flex;
@@ -881,10 +922,10 @@ body {
   padding: 7px 0;
   text-align: center;
   font-size: 40px;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   z-index: 2;
   top: 0;
-  right: -17%;
+  right: -10%;
   color: white;
   position: absolute;
   transition: all 0.5s;
@@ -903,10 +944,11 @@ body {
   .block_portfolio_content_info a:hover {
     border-radius: 10px 0 0 10px;
     color: #d1d4cd;
+    padding: 20px 40px 20px 20px;
   }
   .block_portfolio_content_info a:hover span {
     opacity: 1;
-    width: 25%;
+    width: 50px;
   }
   .block_portfolio_content_info a:hover span i {
     opacity: 1;
@@ -1505,10 +1547,10 @@ body {
   padding: 7px 0;
   text-align: center;
   font-size: 40px;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   z-index: 2;
   top: 0;
-  right: -17%;
+  right: -22%;
   color: white;
   position: absolute;
   transition: all 0.5s;
@@ -1527,10 +1569,11 @@ body {
   .block_contacts_forms form .buttom_send button:hover {
     border-radius: 10px 0 0 10px;
     color: #d1d4cd;
+    padding: 20px 40px 20px 20px;
   }
   .block_contacts_forms form .buttom_send button:hover span {
     opacity: 1;
-    width: 25%;
+    width: 50px;
   }
   .block_contacts_forms form .buttom_send button:hover span i {
     opacity: 1;
