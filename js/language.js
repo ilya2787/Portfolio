@@ -45,7 +45,7 @@ const Language_arrya = {
     },
     "header_title_3" : {
         "RU": "я web-разработчик",
-        "EN": "I am a web-developer",
+        "EN": "I`m a web-developer",
     },
     "port_h" : {
         "RU": "Портфолио",

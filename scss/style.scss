@@ -542,12 +542,10 @@ body{
         position: absolute;
         right: 90px;
         top: 0;
-        @media (max-width: 760px) {
+        line-height: 1.5;
+        @media (max-width:950px) {
             right: auto;
-            left: 20px;
-        }
-        @media (max-width: 460px) {
-            line-height: 1.5;
+            left: 20px;  
         }
 
     }
