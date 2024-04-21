@@ -1,0 +1,6 @@
+{
+    "php.validate.executablePath": "/var/run/host/usr/bin/php",
+    "phpserver.phpPath": "/var/run/host/usr/bin/php",
+    "phpserver.phpConfigPath": "/var/run/host/usr/bin/php",
+    "intelephense.diagnostics.run": "onSave"
+}
