@@ -45,10 +45,12 @@
         }
     }
     p{
-        font-size: clamp(14px, 3vw, 20px);
+        font-size: clamp(18px, 3vw, 20px);
         line-height: 1.8;
+        letter-spacing: 2px;
         text-align: initial;
         margin: 0;
+        font-family: "Monserr_bold";
         padding-top: 40px;
     }
     .icons{

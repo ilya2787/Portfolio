@@ -2,6 +2,14 @@
   font-family: "Pixil_Font";
   src: url(../../fonts/Press_Start_2P/PressStart2P-Regular.ttf);
 }
+@font-face {
+  font-family: "Monserr_bold";
+  src: url(../../fonts/Monserrat/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Robo";
+  src: url(../../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
 #anchor_Portfolio {
   position: relative;
 }
@@ -433,6 +441,11 @@ body {
     background-position: 50% 50%;
   }
 }
+@media (max-width: 1200px) and (max-height: 650px) {
+  .header {
+    background-position: 50px 50px;
+  }
+}
 @media (max-width: 760px) {
   .header {
     background-image: none;
@@ -445,6 +458,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media (max-width: 760px) and (max-height: 600px) {
+  .header_content {
+    flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 430px) {
+  .header_content {
+    margin: 0 10px;
+  }
 }
 .header nav {
   position: absolute;
@@ -743,6 +767,18 @@ body {
     display: block;
   }
 }
+@media (max-height: 700px) {
+  .header .img_header_mobile {
+    top: 50px;
+  }
+}
+@media (max-height: 600px) {
+  .header .img_header_mobile {
+    width: clamp(150px, 50vw, 300px);
+    height: clamp(50px, 30vw, 200px);
+    right: 20px;
+  }
+}
 .header .header_title {
   margin: 0 0 0 90px;
 }
@@ -759,8 +795,18 @@ body {
 }
 @media (max-width: 430px) {
   .header .header_title {
-    margin: 0;
+    margin: 0 0 0 8px;
     text-align: center;
+  }
+}
+@media (max-height: 700px) {
+  .header .header_title {
+    margin: 50px 0 0 50px;
+  }
+}
+@media (max-height: 700px) {
+  .header .header_title {
+    margin: 50px 0 0 50px;
   }
 }
 .header .header_title h1 {
@@ -918,13 +964,20 @@ body {
 }
 .block_portfolio_content_info p {
   color: #d1d4cd;
-  font-size: clamp(15px, 1.7vw, 25px);
+  font-size: clamp(21px, 2vw, 25px);
   line-height: 1.8;
-  letter-spacing: 1spx;
+  letter-spacing: 1px;
+  margin-top: 90px;
+  font-family: "Monserr_bold";
+}
+@media (max-width: 760px) {
+  .block_portfolio_content_info p {
+    margin-top: 0;
+  }
 }
 .block_portfolio_content_info a {
   position: absolute;
-  bottom: 0;
+  top: 0;
   background-color: rgba(244, 208, 183, 0.1);
   padding: 20px 30px;
   border-radius: 10px;
@@ -936,6 +989,12 @@ body {
 @media (max-width: 1300px) {
   .block_portfolio_content_info a {
     font-size: 15px;
+  }
+}
+@media (max-width: 760px) {
+  .block_portfolio_content_info a {
+    top: auto;
+    bottom: 0;
   }
 }
 @media (max-width: 500px) {
@@ -1030,9 +1089,10 @@ body {
 .block_about p {
   margin: 0 0 100px 0;
   color: #d1d4cd;
-  font-size: clamp(15px, 3vw, 25px);
+  font-size: clamp(20px, 3vw, 29px);
   text-align: center;
   line-height: 1.5;
+  font-family: "Monserr_bold";
   letter-spacing: 2px;
 }
 @media (max-width: 900px) {
@@ -1103,10 +1163,12 @@ body {
   }
 }
 .block_about .block_about_skills_blocks_frontend p {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(18px, 3vw, 20px);
   line-height: 1.8;
+  letter-spacing: 2px;
   text-align: initial;
   margin: 0;
+  font-family: "Monserr_bold";
   padding-top: 40px;
 }
 .block_about .block_about_skills_blocks_frontend .icons {
@@ -1171,10 +1233,12 @@ body {
   }
 }
 .block_about .block_about_skills_blocks_backend p {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(18px, 3vw, 20px);
   line-height: 1.8;
+  letter-spacing: 2px;
   text-align: initial;
   margin: 0;
+  font-family: "Monserr_bold";
   padding-top: 40px;
 }
 .block_about .block_about_skills_blocks_backend .icons {
@@ -1239,10 +1303,12 @@ body {
   }
 }
 .block_about .block_about_skills_blocks_design p {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(18px, 3vw, 20px);
   line-height: 1.8;
+  letter-spacing: 2px;
   text-align: initial;
   margin: 0;
+  font-family: "Monserr_bold";
   padding-top: 40px;
 }
 .block_about .block_about_skills_blocks_design .icons {
@@ -1288,6 +1354,7 @@ body {
 @media (max-width: 760px) {
   .block_contacts {
     padding: 0 20px;
+    margin: 200px auto 200px auto;
   }
 }
 .block_contacts h1 {
@@ -1433,11 +1500,12 @@ body {
 }
 .block_contacts_forms form .input_name #User_name {
   width: calc(100% - 40px);
+  font-family: "Monserr_bold";
   height: 70px;
   border-radius: 10px;
   border: none;
   padding: 0 20px;
-  font-size: clamp(22px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 25px);
   color: #d1d4cd;
   background-color: rgba(244, 208, 183, 0.1);
   border: 2px solid transparent;
@@ -1485,8 +1553,9 @@ body {
   height: 70px;
   border-radius: 10px;
   border: none;
+  font-family: "Monserr_bold";
   padding: 0 20px;
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 25px);
   color: #d1d4cd;
   background-color: rgba(244, 208, 183, 0.1);
   transition: all 0.5s;
@@ -1528,10 +1597,11 @@ body {
   width: calc(100% - 40px);
   border-radius: 10px;
   border: none;
+  font-family: "Monserr_bold";
   background-color: rgba(244, 208, 183, 0.1);
   resize: none;
   padding: 20px;
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 25px);
   color: #d1d4cd;
   border: 2px solid transparent;
   transition: all 0.5s;
