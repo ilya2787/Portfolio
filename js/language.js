@@ -8,8 +8,8 @@ const Language_arrya = {
         "EN": "Hello",
     },
     "manu_2" : {
-        "RU": "Портфолио",
-        "EN": "Portfolio",
+        "RU": "Проекты",
+        "EN": "Projects",
     },
     "manu_3" : {
         "RU": "Обо мне",
@@ -24,8 +24,8 @@ const Language_arrya = {
         "EN": "Hello",
     },
     "manu_2_b" : {
-        "RU": "Портфолио",
-        "EN": "Portfolio",
+        "RU": "Проекты",
+        "EN": "Projects",
     },
     "manu_3_b" : {
         "RU": "Обо мне",
@@ -48,8 +48,8 @@ const Language_arrya = {
         "EN": "I`m a web-developer",
     },
     "port_h" : {
-        "RU": "Портфолио",
-        "EN": "Portfolio",
+        "RU": "Проекты",
+        "EN": "Projects",
     },
     "text_port" : {
         "RU": "Данный сайт разработан на базе Python(Django) с применением HTML, CSS(SCSS), javaScript",
@@ -113,8 +113,8 @@ const Language_arrya = {
         "EN": "Hello",
     },
     "manu_2_fut" : {
-        "RU": "Портфолио",
-        "EN": "Portfolio",
+        "RU": "Проекты",
+        "EN": "Projects",
     },
     "manu_3_fut" : {
         "RU": "Обо мне",

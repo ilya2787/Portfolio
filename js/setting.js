@@ -58,6 +58,60 @@ header_menu_a.forEach((a) => {
   
 
 
+const Theme_box = document.querySelector('.ThemeCheckBox');
+const HeaderDoc = document.querySelector('.header');
+const mediaQuery = window.matchMedia('(max-width: 760px)');
+
+
+
+function Header_background_1(e){
+    if (e.matches){
+        HeaderDoc.setAttribute('style', 'background-image: none')
+    }else{
+        HeaderDoc.setAttribute('style', 'background-image: url(../img/img_header1.jpg);')
+    }
+}
+
+function Header_background_2(e){
+    if (e.matches){
+        HeaderDoc.setAttribute('style', 'background-image: none')
+    }else{
+        HeaderDoc.setAttribute('style', 'background-image: url(../img/img_header_white.jpg);')
+    }
+}
+
+
+if (localStorage.getItem('darkMod') === 'dark_active' ){
+    Theme_box.classList.add('ThemeCheckBox_active');
+    document.body.classList.add('dark_active');
+    mediaQuery.addListener(Header_background_1);
+    Header_background_1(mediaQuery);
+    
+}else{
+    mediaQuery.addListener(Header_background_2);
+    Header_background_2(mediaQuery);  
+}
+
+
+
+Theme_box.onclick = function(){
+    Theme_box.classList.toggle('ThemeCheckBox_active');
+    const isDarc = document.body.classList.toggle('dark_active');
+
+    if(isDarc){
+        localStorage.setItem('darkMod', 'dark_active')
+        mediaQuery.addListener(Header_background_1);
+        Header_background_1(mediaQuery);
+        
+    }else{
+        localStorage.setItem('darkMod', 'light')
+        mediaQuery.addListener(Header_background_2);
+        Header_background_2(mediaQuery);
+    }
+
+}
+
+
 
 
 

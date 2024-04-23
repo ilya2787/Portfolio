@@ -25,9 +25,15 @@
                         <a href="#EN" id="EN" class="land_btn">EN</a>
                     </div>
                 </div>
+
+                <div class="ThemeCheckBox">
+                    <i class="fa-regular fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+
                 <ul class="Menu">
                     <li><a href="#start_headre" class="lng_manu_1">Привет</a></li>
-                    <li><a href="#anchor_Portfolio" class="lng_manu_2">Портфолио</a></li>
+                    <li><a href="#anchor_Portfolio" class="lng_manu_2">Проекты</a></li>
                     <li><a href="#anchor_About_my" class="lng_manu_3">Обо мне</a></li>
                     <li><a href="#anchor_My_contacti" class="lng_manu_4">Контакты</a></li>
                 </ul>
@@ -41,7 +47,7 @@
                 <div class="header-menu">
                     <ul>
                         <li><a href="#start_headre" class="lng_manu_1_b burgerA">Привет</a></li>
-                        <li><a href="#anchor_Portfolio" class="lng_manu_2_b burgerA">Портфолио</a></li>
+                        <li><a href="#anchor_Portfolio" class="lng_manu_2_b burgerA">Проекты</a></li>
                         <li><a href="#anchor_About_my" class="lng_manu_3_b burgerA">Обо мне</a></li>
                         <li><a href="#anchor_My_contacti" class="lng_manu_4_b burgerA">Контакты</a></li>
                     </ul>
@@ -62,7 +68,7 @@
     <span id="Dirt3"></span>
     <div id="anchor_Portfolio"></div>
     <div class="block_portfolio conteiner">
-        <h1 class="lng_port_h">Портфолио</h1>
+        <h1 class="lng_port_h">Проекты</h1>
         <h2>HTML CSS JavaScript Python</h2>
 
         <div class="block_portfolio_content">
@@ -199,7 +205,7 @@
             <div class="replay_menu">
                 <ul>
                     <li><a href="#start_headre" class="lng_manu_1_fut">Привет</a></li>
-                    <li><a href="#anchor_Portfolio" class="lng_manu_2_fut">Портфолио</a></li>
+                    <li><a href="#anchor_Portfolio" class="lng_manu_2_fut">Проекты</a></li>
                     <li><a href="#anchor_About_my" class="lng_manu_3_fut">Обо мне</a></li>
                     <li><a href="#anchor_My_contacti" class="lng_manu_4_fut">Контакты</a></li>
                 </ul>

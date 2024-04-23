@@ -1,0 +1,32 @@
+:root{
+    --Body_color: #f7f3ed;
+    --text_color_withe: #2f2f2f;
+    --Box_shodow_img_header: 2px solid #dddddd;
+    --BackColor_Before_img_header: #888585;
+    --BackColor_blockSkils: rgba(237,237,237, 0.3);
+    --BorderColor_blockSkils:  3px solid #e3e3e3;
+    --BoxShoudou_blockSkils: 0 0 25px 10px #c5c5c5;
+    --BackColor_blockBurger: rgba(227,227,227, 0.98);
+    --BackColor_FocusInput: rgba(255,255,255, 0.7);
+    --BackColor_input: rgba(148,130,118, 0.1);
+    --Border_BTN: #2f2f2f;
+    --BackColor_Theme_bol:#010910;
+    --BackColor_Theme_icon: #f7f3ed;
+
+}
+
+.dark_active{
+    --Body_color: #010910;
+    --text_color_withe: #d1d4cd;
+    --Box_shodow_img_header: 2px solid #9f9f9f;
+    --BackColor_Before_img_header: #787978;
+    --BackColor_blockSkils: rgba(8, 30, 42, 0.3);
+    --BorderColor_blockSkils:  3px solid #2c3a45;
+    --BoxShoudou_blockSkils: 0 0 25px 10px #2a343c;
+    --BackColor_blockBurger: rgba(1, 9, 16, 0.98);
+    --BackColor_FocusInput: rgba(1, 9, 16, 0.7);
+    --BackColor_input: rgba(248, 221, 202, 0.1);
+    --Border_BTN: #3a3a3a5a;
+    --BackColor_Theme_bol:#f7f3ed;
+    --BackColor_Theme_icon: #010910;
+}

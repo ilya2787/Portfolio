@@ -112,7 +112,7 @@
         box-shadow: 0 0 50px 5px $accent_color; 
     }
     80%{
-        box-shadow: 0 0 50px 5px $text_color_withe; 
+        box-shadow: 0 0 50px 5px var(--text_color_withe); 
     }
     100%{
         top: 0;
@@ -133,7 +133,7 @@
         box-shadow: 0 0 50px 5px $accent_color; 
     }
     80%{
-        box-shadow: 0 0 50px 5px $text_color_withe; 
+        box-shadow: 0 0 50px 5px var(--text_color_withe); 
     }
     100%{
         top: -100vh;
